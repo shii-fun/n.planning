@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N planning | 内定まで伴走。「私らしい働き方」を実現する</title>
+    <meta name="description" content="キャリアゼロ、5年のブランクから在宅ワークで月20-30万。なあが教える、本気で人生を変えたいママのための在宅ワーク確立プラン。内定まで無期限で伴走.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Shippori+Mincho:wght@400;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-beige': '#FAF9F6',
+                        'brand-pink': '#E6A4B4', // くすみピンク
+                        'brand-pink-dark': '#D3869B',
+                        'brand-grey': '#7D7D7D',
+                        'brand-charcoal': '#4A4A4A',
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans JP', 'sans-serif'],
+                        serif: ['Shippori Mincho', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { background-color: #FAF9F6; color: #4A4A4A; scroll-behavior: smooth; }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 1.0s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        
+        /* ヒーローセクションのアニメーション */
+        .fade-in { animation: fadeIn 1.5s ease-out forwards; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* カスタムスクロールバー */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #E6A4B4; border-radius: 10px; }
+        
+        /* 装飾的な要素 */
+        .blob {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: #E6A4B4;
+            filter: blur(80px);
+            opacity: 0.1;
+            border-radius: 50%;
+            z-index: -1;
+        }
+        @media (min-width: 768px) {
+            .blob { width: 500px; height: 500px; }
+        }
+
+        .comparison-table { border-collapse: separate; border-spacing: 0; }
+        .comparison-table th, .comparison-table td { border-bottom: 1px solid #eee; }
+        .check-icon { color: #E6A4B4; }
+    </style>
+</head>
+<body class="font-sans antialiased overflow-x-hidden">
+
+    <!-- ヘッダー -->
+    <header class="fixed w-full top-0 z-50 bg-white/70 backdrop-blur-md border-b border-brand-pink/10">
+        <div class="max-w-6xl mx-auto px-4 md:px-6 py-3 md:py-4 flex justify-between items-center">
+            <h1 class="text-lg md:text-xl font-bold tracking-widest font-serif text-brand-pink-dark">N planning</h1>
+            <a href="#cta" class="bg-brand-pink hover:bg-brand-pink-dark text-white text-[10px] md:text-sm px-4 md:px-6 py-2 md:py-2.5 rounded-full transition-all duration-300 shadow-md active:scale-95">
+                お申し込みはこちら
+            </a>
+        </div>
+    </header>
+
+    <!-- ヒーローセクション -->
+    <section class="relative pt-24 pb-16 md:pt-48 md:pb-32 overflow-hidden">
+        <div class="blob -top-20 -left-20"></div>
+        <div class="max-w-6xl mx-auto px-6 relative z-10">
+            <div class="flex flex-col md:flex-row items-center">
+                <!-- テキストエリア：幅を広げ、画像に重ねるためのネガティブマージンを追加 -->
+                <div class="md:w-7/12 fade-in text-center md:text-left z-20 md:-mr-20">
+                    <span class="inline-block px-4 py-1 bg-brand-pink/10 text-brand-pink-dark text-xs md:text-sm font-bold rounded-full mb-4 md:mb-6 italic">
+                        Special Training Program
+                    </span>
+                    <h2 class="text-3xl md:text-6xl font-serif leading-[1.3] mb-6 md:mb-8 whitespace-nowrap">
+                        「私らしい働き方」を<br>
+                        <span class="text-brand-pink-dark underline decoration-brand-pink/40 underline-offset-8">内定まで。</span>
+                    </h2>
+                    <p class="text-sm md:text-lg leading-relaxed mb-8 md:mb-10 text-brand-grey font-light">
+                        キャリアゼロ・スキルゼロ・自信ゼロ。<br>
+                        そこから這い上がり在宅ワークを確立した私に<br>
+                        あなたの未来を変えるお手伝いをさせてください。<br>
+                        最初の内定を獲得するその日まで<br>
+                        責任を持って伴走する在宅ワーク確立プログラム。
+                    </p>
+                    <!-- ボタンと募集人数をセンター配置へ調整 -->
+                    <div class="flex flex-col items-center md:items-center gap-3">
+                        <a href="#cta" class="w-full sm:w-auto bg-brand-pink hover:bg-brand-pink-dark text-white px-8 md:px-12 py-3 md:py-4 rounded-full text-center font-bold shadow-lg shadow-brand-pink/20 transition-all transform hover:-translate-y-1 text-sm md:text-base">
+                            詳細を見てみる
+                        </a>
+                        <p class="text-[10px] md:text-xs text-brand-grey flex items-center justify-center">
+                            <span class="w-2 h-2 bg-brand-pink rounded-full mr-2 animate-pulse"></span>
+                            今回募集：限定5名様のみ
+                        </p>
+                    </div>
+                </div>
+                <!-- 画像エリア：幅を少し小さくし、奥行きを出す -->
+                <div class="md:w-5/12 relative fade-in w-full max-w-sm mx-auto md:max-w-none mt-12 md:mt-0" style="animation-delay: 0.3s;">
+                    <div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl md:rotate-2 hover:rotate-0 transition-transform duration-700">
+                        <img src="https://images.unsplash.com/photo-1544717297-fa95b3ee51f3?q=80&w=1470&auto=format&fit=crop" alt="PCで作業する女性" class="w-full h-[280px] md:h-[420px] object-cover" onerror="this.src='https://via.placeholder.com/600x450?text=PC+Work+Image'">
+                    </div>
+                    <div class="absolute -bottom-4 md:-bottom-8 -left-4 md:-left-12 bg-white p-3 md:p-6 rounded-2xl shadow-xl z-30 max-w-[180px] md:max-w-[260px] -rotate-2">
+                        <p class="text-[10px] md:text-sm font-serif italic text-brand-pink-dark leading-relaxed">「3ヶ月はあくまで目安。<br>あなたのペースを大切に。」</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 共感セクション -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h3 class="text-xl md:text-3xl font-serif mb-12 md:16 reveal leading-relaxed">こんな悩み、<br class="md:hidden">抱えていませんか？</h3>
+            <div class="grid md:grid-cols-2 gap-4 md:gap-6 reveal">
+                <div class="bg-brand-beige p-6 md:p-8 rounded-2xl text-left border-l-4 border-brand-pink shadow-sm">
+                    <p class="text-brand-grey font-medium italic text-sm md:text-base">「子供との時間も大切にしたいけれど、<br class="md:hidden">収入も必要…」</p>
+                </div>
+                <div class="bg-brand-beige p-6 md:p-8 rounded-2xl text-left border-l-4 border-brand-pink shadow-sm">
+                    <p class="text-brand-grey font-medium italic text-sm md:text-base">「特別なスキルがない。<br class="md:hidden">何から始めていいかわからない…」</p>
+                </div>
+                <div class="bg-brand-beige p-6 md:p-8 rounded-2xl text-left border-l-4 border-brand-pink shadow-sm">
+                    <p class="text-brand-grey font-medium italic text-sm md:text-base">「在宅ワークは怪しい詐欺や<br class="md:hidden">低単価案件ばかりな気がする…」</p>
+                </div>
+                <div class="bg-brand-beige p-6 md:p-8 rounded-2xl text-left border-l-4 border-brand-pink shadow-sm">
+                    <p class="text-brand-grey font-medium italic text-sm md:text-base">「一人で頑張ろうとしても、<br class="md:hidden">結局挫折してしまう…」</p>
+                </div>
+            </div>
+            
+            <div class="mt-16 md:20 reveal px-2">
+                <div class="inline-block relative mb-4 md:mb-6">
+                    <p class="text-xl md:text-3xl font-bold text-brand-pink-dark">「絶対できるのに！」</p>
+                    <div class="absolute -bottom-2 left-0 w-full h-1 bg-brand-pink/30"></div>
+                </div>
+                <p class="leading-loose text-brand-charcoal text-sm md:text-lg">
+                    これを見た時、私はくやしさで胸がいっぱいになりました。<br>
+                    在宅ワークに必要なのは、<br class="md:hidden">高度な学歴へのキャリアでもありません。<br>
+                    入り口として必要なのは、<br class="md:hidden"><span class="font-bold text-brand-pink-dark text-nowrap">整ったマインド</span>と、<span class="font-bold text-brand-pink-dark text-nowrap">正しい一歩を踏み出す勇気。</span><br>
+                    不安な時に相談できる「相手」です。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ロードマップセクション -->
+    <section class="py-16 md:py-24 bg-brand-beige overflow-hidden">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-12 md:mb-20 reveal">
+                <h3 class="text-2xl md:text-3xl font-serif mb-4">内定獲得へのロードマップ</h3>
+                <p class="text-brand-grey font-light text-sm md:text-base">3ヶ月を目安に「自走できる私」へ</p>
+            </div>
+            
+            <div class="relative space-y-16 md:space-y-24">
+                <!-- 縦のライン -->
+                <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-brand-pink/30 -translate-x-1/2"></div>
+                
+                <!-- Step 01 -->
+                <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12 reveal">
+                    <div class="md:w-1/2 md:text-right">
+                        <span class="text-brand-pink-dark font-bold text-lg md:text-xl mb-2 block font-serif">Step 01</span>
+                        <h4 class="text-xl md:text-2xl font-bold mb-4">マインドセットと自己理解</h4>
+                        <p class="text-brand-grey leading-relaxed text-xs md:text-base">
+                            MBTIや自己分析、個別ヒアリングを通じて、あなたの適正や強みを深掘り。<br>
+                            挫折しないための思考法を身に付け、あなた専用の活動ロードマップを作成します。
+                        </p>
+                    </div>
+                    <div class="w-12 h-12 md:w-14 md:h-14 bg-brand-pink text-white rounded-full flex items-center justify-center relative z-10 shadow-xl font-bold text-lg md:text-xl shrink-0">1</div>
+                    <div class="md:w-1/2 w-full">
+                        <img src="https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?q=80&w=1000&auto=format&fit=crop" class="rounded-2xl shadow-lg w-full max-w-sm mx-auto" alt="自己分析の様子">
+                    </div>
+                </div>
+
+                <!-- Step 02 -->
+                <div class="flex flex-col md:flex-row-reverse items-center gap-8 md:gap-12 reveal">
+                    <div class="md:w-1/2 md:text-left">
+                        <span class="text-brand-pink-dark font-bold text-lg md:text-xl mb-2 block font-serif">Step 02</span>
+                        <h4 class="text-xl md:text-2xl font-bold mb-4">実務スキル習得トレーニング</h4>
+                        <p class="text-brand-grey leading-relaxed text-xs md:text-base">
+                            Googleツール、Canva、Slack、Notionなど、在宅ワークに必須のツールを使いこなす。さらに最新のAI活用術や視覚誘導のコツまで、動画学習で徹底的に武器を磨きます。
+                        </p>
+                    </div>
+                    <div class="w-12 h-12 md:w-14 md:h-14 bg-brand-pink text-white rounded-full flex items-center justify-center relative z-10 shadow-xl font-bold text-lg md:text-xl shrink-0">2</div>
+                    <div class="md:w-1/2 w-full flex justify-center">
+                        <img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=1000&auto=format&fit=crop" class="rounded-2xl shadow-lg w-full max-w-sm" alt="トレーニングの様子">
+                    </div>
+                </div>
+
+                <!-- Step 03 -->
+                <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12 reveal">
+                    <div class="md:w-1/2 md:text-right">
+                        <span class="text-brand-pink-dark font-bold text-lg md:text-xl mb-2 block font-serif">Step 03</span>
+                        <h4 class="text-xl md:text-2xl font-bold mb-4">内定獲得までフルサポート</h4>
+                        <p class="text-brand-grey leading-relaxed text-xs md:text-base">
+                            求人ピックアップ、刺さる応募文の添削、希望者には面接練習も。<span class="font-bold text-brand-pink-dark">あなたが納得のいく仕事に就けるまで</span>、私がマンツーマンで責任を持って導きます。
+                        </p>
+                    </div>
+                    <div class="w-12 h-12 md:w-14 md:h-14 bg-brand-pink text-white rounded-full flex items-center justify-center relative z-10 shadow-xl font-bold text-lg md:text-xl shrink-0">3</div>
+                    <div class="md:w-1/2 w-full">
+                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=1000&auto=format&fit=crop" class="rounded-2xl shadow-lg w-full max-w-sm mx-auto" alt="採用のイメージ">
+                    </div>
+                </div>
+
+                <!-- 伴走メッセージ -->
+                <div class="max-w-2xl mx-auto text-center reveal pt-6 md:pt-10">
+                    <p class="text-brand-pink-dark font-bold text-base md:text-xl italic px-4">
+                        ※3ヶ月はあくまで「自走できるようになる」目安です。<br>
+                        内定が出るまで、期間を気にせず徹底的にサポートします。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 特徴・サポートセクション -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <h3 class="text-center text-xl md:text-3xl font-serif mb-12 md:mb-20 reveal leading-relaxed text-brand-charcoal">N planning 4つのサポート</h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div class="group p-6 md:p-10 rounded-3xl bg-brand-beige border border-brand-pink/10 reveal transition-all hover:bg-white hover:shadow-xl">
+                    <div class="w-12 h-12 md:w-14 md:h-14 bg-white group-hover:bg-brand-pink/10 rounded-2xl flex items-center justify-center mb-6 md:mb-8 shadow-sm transition-colors">
+                        <svg class="w-6 h-6 md:w-7 md:h-7 text-brand-pink-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                    </div>
+                    <h5 class="font-bold text-base md:text-lg mb-4">完全個別サポート</h5>
+                    <p class="text-xs md:text-sm text-brand-grey leading-relaxed">マインドセットから自分だけのロードマップ作成まで。通話やチャットでいつでも相談可能です。</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="group p-6 md:p-10 rounded-3xl bg-brand-beige border border-brand-pink/10 reveal transition-all hover:bg-white hover:shadow-xl" style="transition-delay: 0.1s;">
+                    <div class="w-12 h-12 md:w-14 md:h-14 bg-white group-hover:bg-brand-pink/10 rounded-2xl flex items-center justify-center mb-6 md:mb-8 shadow-sm transition-colors">
+                        <svg class="w-6 h-6 md:w-7 md:h-7 text-brand-pink-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                    </div>
+                    <h5 class="font-bold text-base md:text-lg mb-4">実践スキル動画</h5>
+                    <p class="text-xs md:text-sm text-brand-grey leading-relaxed">Canva, Slack, Googleツール, AI活用法など、現場で即戦力として使えるスキルを動画で網羅。</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="group p-6 md:p-10 rounded-3xl bg-brand-beige border border-brand-pink/10 reveal transition-all hover:bg-white hover:shadow-xl" style="transition-delay: 0.2s;">
+                    <div class="w-14 h-14 bg-white group-hover:bg-brand-pink/10 rounded-2xl flex items-center justify-center mb-6 md:mb-8 shadow-sm transition-colors">
+                        <svg class="w-6 h-6 md:w-7 md:h-7 text-brand-pink-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <!-- 指定箇所の装飾を削除しテキストを更新 -->
+                    <h5 class="font-bold text-base md:text-lg mb-4">内定までの無期限サポート。</h5>
+                    <p class="text-xs md:text-sm text-brand-grey leading-relaxed">求人選定、応募文添削、面接練習。<br>あなたの内定まで、回数無制限でお手伝いします。</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="group p-6 md:p-10 rounded-3xl bg-brand-beige border border-brand-pink/10 reveal transition-all hover:bg-white hover:shadow-xl" style="transition-delay: 0.3s;">
+                    <div class="w-12 h-12 md:w-14 md:h-14 bg-white group-hover:bg-brand-pink/10 rounded-2xl flex items-center justify-center mb-6 md:mb-8 shadow-sm transition-colors">
+                        <svg class="w-6 h-6 md:w-7 md:h-7 text-brand-pink-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    </div>
+                    <h5 class="font-bold text-base md:text-lg mb-4">卒業後も安心</h5>
+                    <p class="text-xs md:text-sm text-brand-grey leading-relaxed">動画は見放題。さらにSNS運用の基本マニュアルもプレゼント。ずっと続く武器になります。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- プロフィールセクション -->
+    <section class="py-16 md:py-24 bg-brand-pink/5">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16 reveal">
+                <div class="w-40 h-40 md:w-56 md:h-56 flex-shrink-0 relative">
+                    <div class="absolute inset-0 bg-brand-pink rounded-full -rotate-6 z-0"></div>
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1000&auto=format&fit=crop" alt="なあ プロフィール写真" class="w-full h-full object-cover rounded-full border-4 border-white shadow-xl relative z-10">
+                </div>
+                <div class="text-center md:text-left">
+                    <span class="text-brand-pink-dark font-serif italic mb-2 block tracking-widest text-xs md:text-sm">Planner Profile</span>
+                    <h4 class="text-xl md:text-3xl font-bold mb-4 md:mb-6 text-brand-charcoal">なあ <br class="md:hidden"><span class="text-sm md:text-base font-normal text-brand-grey md:ml-3">2児のママ / 在宅ワークプランナー</span></h4>
+                    <p class="text-xs md:text-[15px] leading-loose text-brand-charcoal mb-6">
+                        ブライダル販売員、派遣社員を経て出産。5年のブランクがあり、キャリアはゼロ。<br>
+                        PCスキルも学生レベル。この状態からスクールなしで、現在は事務・デザイン・SNS運用などを中心に月20-30万の収入を得ています。<br><br>
+                        「在宅ワークでないと成り立たない家庭はたくさんあるはず。」<br>
+                        そんな想いから、私が培ったすべてを渡す覚悟を決めました。<span class="font-bold underline decoration-brand-pink">受講生様が内定を手にするまで、私は絶対に手を離しません。</span>誰かの人生を変えるきっかけになれば嬉しいです。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 価格比較セクション -->
+    <section class="py-16 md:py-24 bg-brand-beige">
+        <div class="max-w-5xl mx-auto px-4 md:px-6">
+            <div class="text-center mb-10 md:mb-16 reveal">
+                <h3 class="text-xl md:text-3xl font-serif mb-4 md:mb-6 leading-tight">在宅ワークを学ぶための<br class="md:hidden">「現実」を知っていますか？</h3>
+                <p class="text-brand-grey text-xs md:text-base leading-relaxed">
+                    一般的に「在宅ワークで自立する」ためにスクールに通おうとすると、<br class="hidden md:block">
+                    実はこれだけのコストとリスクが伴います。
+                </p>
+            </div>
+
+            <div class="reveal overflow-hidden rounded-2xl shadow-sm">
+                <div class="overflow-x-auto">
+                    <table class="w-full bg-white comparison-table min-w-[500px] md:min-w-[600px]">
+                        <thead>
+                            <tr class="bg-gray-50">
+                                <th class="p-4 md:p-6 text-left text-brand-grey font-medium text-xs md:text-base w-1/4">比較項目</th>
+                                <th class="p-4 md:p-6 text-center text-brand-grey font-medium text-xs md:text-base w-1/4">一般的なスクール</th>
+                                <th class="p-4 md:p-6 text-center text-brand-pink-dark font-bold text-xs md:text-base w-2/4 bg-brand-pink/5">N planning</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="p-4 md:p-6 font-bold text-brand-charcoal text-xs md:text-base">受講費用</td>
+                                <td class="p-4 md:p-6 text-center text-red-400 font-bold text-sm md:text-xl">30万〜100万円</td>
+                                <td class="p-4 md:p-6 text-center text-brand-pink-dark font-bold text-lg md:text-2xl bg-brand-pink/5">9.9万円</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 md:p-6 font-medium text-brand-grey text-[10px] md:text-base">サポート期間</td>
+                                <td class="p-4 md:p-6 text-center text-[10px] md:text-sm text-brand-grey leading-relaxed">
+                                    <span class="text-red-400 font-bold">固定期間(3〜6ヶ月)</span><br>終了後は一切相談不可
+                                </td>
+                                <td class="p-4 md:p-6 text-center text-[10px] md:text-sm font-bold text-brand-pink-dark leading-relaxed bg-brand-pink/5 italic">
+                                    <span class="text-lg underline">内定獲得まで無期限</span><br>
+                                    結果が出るまで付き合います
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 md:p-6 font-medium text-brand-grey text-[10px] md:text-base">仕事の獲得</td>
+                                <td class="p-4 md:p-6 text-center text-[10px] md:text-sm text-brand-grey leading-relaxed">スキルの習得のみ<br>（営業は自分次第）</td>
+                                <td class="p-4 md:p-6 text-center text-[10px] md:text-sm font-bold text-brand-pink-dark leading-relaxed bg-brand-pink/5">
+                                    応募文添削・求人選定<br>「内定」にコミット
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 md:p-6 font-medium text-brand-grey text-[10px] md:text-base">サポート体制</td>
+                                <td class="p-4 md:p-6 text-center text-[10px] md:text-sm text-brand-greyによる動画視聴のみ<br>または大人数のグループ</td>
+                                <td class="p-4 md:p-6 text-center text-[10px] md:text-sm font-bold text-brand-pink-dark leading-relaxed bg-brand-pink/5">
+                                    講師と1対1の<br>完全個別・伴走型
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="mt-8 md:12 text-center reveal px-4">
+                <p class="text-brand-charcoal font-bold text-base md:text-xl leading-relaxed mb-4 md:mb-6">
+                    「スクール代が高すぎて、<br class="md:hidden">自立する前に家計が火の車…」
+                </p>
+                <p class="text-brand-grey text-[10px] md:text-base leading-relaxed">
+                    そんな方を一人でも減らしたい。<br class="hidden md:block">
+                    私がスクールを通さず独学で苦労したからこそ、<br class="hidden md:block">
+                    <span class="text-brand-pink-dark font-bold border-b-2 border-brand-pink/30 text-sm md:text-lg">内定という「結果」を手にするまで。</span><br>
+                    主婦が本当に再出発できる価格と内容にこだわりました。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- オファーセクション -->
+    <section id="cta" class="py-16 md:py-24 bg-white relative overflow-hidden">
+        <div class="blob bottom-0 right-0"></div>
+        <div class="max-w-4xl mx-auto px-6 relative z-10 text-center">
+            <div class="bg-brand-beige rounded-[2rem] md:rounded-[3rem] p-6 md:p-20 border-2 border-brand-pink/30 shadow-2xl reveal">
+                <h3 class="text-xl md:text-4xl font-serif mb-8 md:mb-10 leading-relaxed text-brand-pink-dark italic">「いつか」ではなく、今。</h3>
+                
+                <div class="mb-10 inline-block w-full max-w-[320px] md:max-w-sm px-2 md:px-4">
+                    <div class="mb-4 md:mb-6 text-center">
+                        <span class="bg-brand-grey text-white text-[8px] md:text-xs px-3 py-1 rounded-sm uppercase tracking-widest">General Price</span>
+                        <p class="text-sm md:text-xl text-brand-grey line-through mt-2">通常価格：99,000円（税込）</p>
+                    </div>
+                    
+                    <div class="bg-white px-4 md:px-10 py-8 md:py-10 rounded-2xl md:rounded-3xl border-2 md:border-4 border-brand-pink shadow-xl md:transform md:scale-110 relative">
+                        <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-brand-pink text-white text-[8px] md:text-sm px-4 md:px-6 py-1 rounded-full font-bold shadow-md whitespace-nowrap">
+                            第2期生の方限定・特別価格
+                        </div>
+                        <p class="text-3xl md:text-7xl font-bold text-brand-pink-dark tracking-tighter">69,300 <span class="text-lg md:text-2xl">円</span></p>
+                        <p class="text-[8px] md:text-xs text-brand-charcoal mt-2 font-bold">(税込 / <span class="text-brand-pink-dark underline">内定までの全サポート込</span>)</p>
+                    </div>
+                </div>
+
+                <div class="max-w-md mx-auto mb-10 text-left space-y-3 md:space-y-4 pt-4 md:pt-16">
+                    <p class="text-xs md:text-base font-bold text-center text-brand-charcoal mb-4">この価格で受け取れるもの：</p>
+                    <div class="grid grid-cols-1 gap-2 md:gap-3 px-2 md:px-0">
+                        <div class="flex items-center gap-3 bg-white/50 p-2 md:p-3 rounded-lg border border-brand-pink/10">
+                            <span class="text-brand-pink text-lg md:text-xl font-bold">✓</span>
+                            <span class="text-[10px] md:text-base font-bold text-brand-pink-dark">内定獲得まで期間無制限でサポート</span>
+                        </div>
+                        <div class="flex items-center gap-3 bg-white/50 p-2 md:p-3 rounded-lg border border-brand-pink/10">
+                            <span class="text-brand-pink text-lg md:text-xl font-bold">✓</span>
+                            <span class="text-[10px] md:text-base font-bold text-brand-pink-dark">なあとの無制限チャット相談(内定まで)</span>
+                        </div>
+                        <div class="flex items-center gap-3 bg-white/50 p-2 md:p-3 rounded-lg border border-brand-pink/10">
+                            <span class="text-brand-pink text-lg md:text-xl font-bold">✓</span>
+                            <span class="text-[10px] md:text-base">計6回〜の完全個別コンサル</span>
+                        </div>
+                        <div class="flex items-center gap-3 bg-white/50 p-2 md:p-3 rounded-lg border border-brand-pink/10">
+                            <span class="text-brand-pink text-lg md:text-xl font-bold">✓</span>
+                            <span class="text-[10px] md:text-base">在宅ワーク実務動画ライブラリ</span>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="text-brand-pink-dark font-bold text-base md:text-2xl mb-8 md:mb-10 italic animate-bounce tracking-tight">内定後までの「丁寧な伴走」をお約束します。</p>
+
+                <div class="space-y-4 md:space-y-6 px-4 md:px-0">
+                    <a href="#" class="block w-full bg-brand-pink hover:bg-brand-pink-dark text-white text-base md:text-2xl font-bold py-5 md:py-8 rounded-full shadow-2xl transition-all transform hover:scale-[1.03] active:scale-95">
+                        N planningで人生を変える
+                    </a>
+                    <p class="text-[8px] md:text-xs text-brand-grey font-medium tracking-wider text-center">※外部決済サービス「STORES」を利用します</p>
+                </div>
+
+                <div class="mt-10 md:14 pt-8 md:10 border-t border-brand-pink/20">
+                    <p class="text-[10px] md:text-sm text-brand-charcoal mb-4 md:mb-6 leading-relaxed">
+                        購入完了した方は、下記の公式LINEに<br>
+                        <span class="font-bold border-b border-brand-pink">「購入完了のスクリーンショット」とお名前</span>をお送りください。
+                    </p>
+                    <a href="https://lin.ee/UsRNuDU" target="_blank" class="inline-flex items-center justify-center gap-2 bg-[#06C755] hover:opacity-90 text-white px-8 md:px-10 py-3 md:py-4 rounded-full font-bold transition-opacity text-xs md:text-sm shadow-lg">
+                        <svg class="w-4 h-4 md:w-5 md:h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M24 10.304c0-5.369-5.383-9.738-12-9.738-6.616 0-12 4.369-12 9.738 0 4.814 4.269 8.846 10.036 9.608.391.084.922.258 1.057.592.121.303.079.778.039 1.085l-.171 1.027c-.053.303-.242 1.185 1.039.646 1.281-.538 6.915-4.071 9.448-6.965 1.728-1.976 2.552-3.799 2.552-5.793z"/></svg>
+                        公式LINEへ報告する
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- コンディション -->
+    <section class="py-16 md:py-24 bg-brand-beige">
+        <div class="max-w-3xl mx-auto px-6">
+            <h4 class="text-center text-lg md:text-2xl font-serif mb-10 md:mb-12 reveal font-bold">⚠️ 参加にあたっての条件</h4>
+            <div class="bg-white rounded-2xl md:rounded-3xl p-6 md:p-12 shadow-sm space-y-4 md:space-y-6 reveal border border-gray-100">
+                <div class="flex items-start gap-3 md:gap-4 border-b border-brand-pink/5 pb-4 md:pb-5">
+                    <span class="bg-brand-pink/10 text-brand-pink-dark font-bold w-5 h-5 md:w-6 md:h-6 flex items-center justify-center rounded-full shrink-0 text-[10px]">1</span>
+                    <p class="text-xs md:text-[15px] leading-relaxed">やりとりは公式LINEで<br class="md:hidden">スムーズに行える方</p>
+                </div>
+                <div class="flex items-start gap-3 md:gap-4 border-b border-brand-pink/5 pb-4 md:pb-5">
+                    <span class="bg-brand-pink/10 text-brand-pink-dark font-bold w-5 h-5 md:w-6 md:h-6 flex items-center justify-center rounded-full shrink-0 text-[10px]">2</span>
+                    <p class="text-xs md:text-[15px] leading-relaxed">内定獲得まで諦めずに<br class="md:hidden">真摯に取り組み続けられる方</p>
+                </div>
+                <div class="flex items-start gap-3 md:gap-4 border-b border-brand-pink/5 pb-4 md:pb-5">
+                    <span class="bg-brand-pink/10 text-brand-pink-dark font-bold w-5 h-5 md:w-6 md:h-6 flex items-center justify-center rounded-full shrink-0 text-[10px]">3</span>
+                    <p class="text-xs md:text-[15px] leading-relaxed">言い訳をせず、<br class="md:hidden">自らの人生を主導して動ける方</p>
+                </div>
+                <div class="flex items-start gap-3 md:gap-4 border-b border-brand-pink/5 pb-4 md:pb-5">
+                    <span class="bg-brand-pink/10 text-brand-pink-dark font-bold w-5 h-5 md:w-6 md:h-6 flex items-center justify-center rounded-full shrink-0 text-[10px]">4</span>
+                    <p class="text-xs md:text-[15px] leading-relaxed">あなたの強みを引き出すために、<br class="md:hidden">自身の背景を誠実に話してくださる方</p>
+                </div>
+                <div class="flex items-start gap-3 md:gap-4">
+                    <span class="bg-brand-pink/10 text-brand-pink-dark font-bold w-5 h-5 md:w-6 md:h-6 flex items-center justify-center rounded-full shrink-0 text-[10px]">5</span>
+                    <p class="text-xs md:text-[15px] leading-relaxed text-brand-pink-dark font-bold">プログラム内容を<br class="md:hidden">一切口外しないと約束できる方</p>
+                </div>
+            </div>
+            <p class="mt-8 md:mt-12 text-center text-brand-grey text-[10px] md:text-[15px] leading-relaxed px-4">
+                「今の環境に居続けるのか」か<br class="md:hidden">「新しい自分になるのか」。<br>
+                その答えは、あなたの手の中にあります。
+            </p>
+        </div>
+    </section>
+
+    <!-- よくある質問 -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <h3 class="text-center text-xl md:text-3xl font-serif mb-12 md:mb-16 reveal font-bold">よくある質問</h3>
+            <div class="space-y-4 md:space-y-8 reveal">
+                <!-- Q1 -->
+                <div class="bg-brand-beige/50 rounded-xl md:rounded-2xl p-5 md:p-8 border border-brand-pink/5">
+                    <p class="text-sm md:text-base font-bold text-brand-pink-dark mb-3 md:mb-4 flex items-start">
+                        <span class="bg-brand-pink text-white w-5 h-5 md:w-6 md:h-6 rounded-full flex items-center justify-center text-[10px] shrink-0 mr-2 md:mr-3">Q</span>
+                        1on1の際、子どもの声が入ってしまったり移りこんでしまう可能性がありますが大丈夫ですか？
+                    </p>
+                    <p class="text-xs md:text-base leading-relaxed text-brand-charcoal flex items-start">
+                        <span class="font-bold text-brand-pink shrink-0 mr-2 md:mr-3">A.</span>
+                        全然大丈夫です！このNplanningは主にママのためのものなのでお子さんの声やテレビ、おもちゃの音などOKです！途中だっこしたりも問題ないのでご安心ください。
+                    </p>
+                </div>
+                <!-- Q2 -->
+                <div class="bg-brand-beige/50 rounded-xl md:rounded-2xl p-5 md:p-8 border border-brand-pink/5">
+                    <p class="text-sm md:text-base font-bold text-brand-pink-dark mb-3 md:mb-4 flex items-start">
+                        <span class="bg-brand-pink text-white w-5 h-5 md:w-6 md:h-6 rounded-full flex items-center justify-center text-[10px] shrink-0 mr-2 md:mr-3">Q</span>
+                        PCを持っていないのですが可能ですか？
+                    </p>
+                    <p class="text-xs md:text-base leading-relaxed text-brand-charcoal flex items-start">
+                        <span class="font-bold text-brand-pink shrink-0 mr-2 md:mr-3">A.</span>
+                        可能です！PC推奨ではありますが、スマホでできるところから始めていきましょう。
+                    </p>
+                </div>
+                <!-- Q3 -->
+                <div class="bg-brand-beige/50 rounded-xl md:rounded-2xl p-5 md:p-8 border border-brand-pink/5">
+                    <p class="text-sm md:text-base font-bold text-brand-pink-dark mb-3 md:mb-4 flex items-start">
+                        <span class="bg-brand-pink text-white w-5 h-5 md:w-6 md:h-6 rounded-full flex items-center justify-center text-[10px] shrink-0 mr-2 md:mr-3">Q</span>
+                        今すぐは働けないのですが…
+                    </p>
+                    <p class="text-xs md:text-base leading-relaxed text-brand-charcoal flex items-start">
+                        <span class="font-bold text-brand-pink shrink-0 mr-2 md:mr-3">A.</span>
+                        色々なご事情で今すぐに動けない方もOK。準備期間に当てましょう！サポートなどは動き出してからでも問題ないので自発的にLINEへご連絡いただければと思います！
+                    </p>
+                </div>
+                <!-- Q4 -->
+                <div class="bg-brand-beige/50 rounded-xl md:rounded-2xl p-5 md:p-8 border border-brand-pink/5">
+                    <p class="text-sm md:text-base font-bold text-brand-pink-dark mb-3 md:mb-4 flex items-start">
+                        <span class="bg-brand-pink text-white w-5 h-5 md:w-6 md:h-6 rounded-full flex items-center justify-center text-[10px] shrink-0 mr-2 md:mr-3">Q</span>
+                        内定がすぐに決まらない場合返金可能ですか？
+                    </p>
+                    <p class="text-xs md:text-base leading-relaxed text-brand-charcoal flex items-start">
+                        <span class="font-bold text-brand-pink shrink-0 mr-2 md:mr-3">A.</span>
+                        大変恐縮ですが、「最初の内定までの」伴走プランなので内定まで頑張っていただきます！
+                    </p>
+                </div>
+                <!-- Q5 -->
+                <div class="bg-brand-beige/50 rounded-xl md:rounded-2xl p-5 md:p-8 border border-brand-pink/5">
+                    <p class="text-sm md:text-base font-bold text-brand-pink-dark mb-3 md:mb-4 flex items-start">
+                        <span class="bg-brand-pink text-white w-5 h-5 md:w-6 md:h-6 rounded-full flex items-center justify-center text-[10px] shrink-0 mr-2 md:mr-3">Q</span>
+                        スキルの習得はできますか？
+                    </p>
+                    <p class="text-xs md:text-base leading-relaxed text-brand-charcoal flex items-start">
+                        <span class="font-bold text-brand-pink shrink-0 mr-2 md:mr-3">A.</span>
+                        できます！ただし、案件を取得するうえで最低限のスキル習得となります。
+                    </p>
+                </div>
+                <!-- Q6 -->
+                <div class="bg-brand-beige/50 rounded-xl md:rounded-2xl p-5 md:p-8 border border-brand-pink/5">
+                    <p class="text-sm md:text-base font-bold text-brand-pink-dark mb-3 md:mb-4 flex items-start">
+                        <span class="bg-brand-pink text-white w-5 h-5 md:w-6 md:h-6 rounded-full flex items-center justify-center text-[10px] shrink-0 mr-2 md:mr-3">Q</span>
+                        内定が決まったあとも相談に乗っていただけますか？
+                    </p>
+                    <p class="text-xs md:text-base leading-relaxed text-brand-charcoal flex items-start">
+                        <span class="font-bold text-brand-pink shrink-0 mr-2 md:mr-3">A.</span>
+                        はい！現状は追加料金なく相談可能にしています。この点は今後募集の際に変更があるかもしれませんが1期生、2期生までは相談可能です。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="py-10 md:py-16 bg-white text-center border-t border-brand-pink/10 px-6">
+        <h2 class="text-xl md:text-2xl font-serif text-brand-pink-dark mb-4">N planning</h2>
+        <p class="text-[8px] md:text-[10px] text-brand-grey tracking-[0.2em] uppercase mb-8 italic">Empowering your work from home lifestyle.</p>
+        <div class="flex flex-col md:flex-row justify-center gap-4 md:gap-6 mb-8">
+            <a href="#" class="text-brand-grey hover:text-brand-pink transition-colors text-[10px] md:text-xs">特定商取引法に基づく表記</a>
+            <a href="#" class="text-brand-grey hover:text-brand-pink transition-colors text-[10px] md:text-xs">プライバシーポリシー</a>
+        </div>
+        <p class="text-[8px] md:text-[10px] text-brand-grey">&copy; 2024 N planning. All Rights Reserved.</p>
+    </footer>
+
+    <!-- スクリプト -->
+    <script>
+        // スクロール時に要素をふわっと表示させる（Intersection Observer）
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach((el) => {
+            observer.observe(el);
+        });
+
+        // スムーズスクロールの微調整
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    const headerOffset = 60;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
